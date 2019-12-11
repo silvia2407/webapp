@@ -7,6 +7,7 @@ $data_array =  array(
 $data=json_encode($data_array);
 
 $url="https://hargaeceran.000webhostapp.com/login";
+//$url="localhost:8080/hargaeceran/login";
 $curl = curl_init();
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);

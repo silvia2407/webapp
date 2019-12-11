@@ -1,19 +1,18 @@
+<?php
+    include_once 'header.php';
+?>
+<script>
+$(document).ready(function(){
+        var html = `
+            <div class="card">
+                <div class="card-header">Selamat di Website Informasi Harga Eceran </div>
+                <div class="card-body">
+                    Data pada website didapat dari API harga eceran https://hargaeceran.000webhostapp.com/ <br/>
+                    Data yang saat ini tersedia hanya data tahun 2017 dan 2018
+                </div>
+            </div>
+            `;
 
-        <?php
-            include_once 'header.php';
-            include_once 'config/auth.php';
-            include_once 'config/callAPI.php';
-            
-            $data_array =  array(
-                "komoditas"=> "all",
-                "kota"=>"all",
-                "bulan"=>1,
-                "tahun"=>2018
-            );
-
-            $get_data = callAPI('GET', 'pertumbuhan/yearOnyear.php', $key, $data_array);
-            //$get_data = callAPI('POST', 'komoditas/all', $key, false);
-            $response = json_decode($get_data, true);
-
-            print_r($response);
-        ?>
+        $('#content').html(html);
+});
+</script>

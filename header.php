@@ -3,14 +3,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Informasi Harga Eceran</title>
-        <link rel="stylesheet" href="bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="custom.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/jqx.base.css" />
     </head>
     <body>
-        <!-- jQuery & Bootstrap 4 JavaScript libraries -->
         <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jqxcore.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jqxdropdownlist.js"></script>
+        <script src="js/jqxlistbox.js"></script>
+        <script src="js/jqxbuttons.js"></script>
+        <script src="js/jqxcheckbox.js"></script>
+        <script src="js/jqxdata.js"></script>
+        <script src="js/jqxexpander.js"></script>
+        <script src="js/jqxgrid.js"></script>
+        <script src="js/jqxgrid.selection.js"></script>
+        <script src="js/jqxgrid.sort.js"></script>
+        <script src="js/jqxinput.js"></script>
+        <script src="js/jqxpanel.js"></script>
+        <script src="js/jqxscrollbar.js"></script>
+        <script src="js/jqxsplitter.js"></script>
         
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="index.php">Informasi Harga Eceran</a>
@@ -27,17 +41,18 @@
             </div>
         </nav>
         
-        <!-- container -->
+         <!--container--> 
         <main role="main" class="container starter-template">
 
             <div class="row">
                 <div class="col">
-
-                    <!-- where prompt / messages will appear -->
+                     <!--where main content will appear--> 
+                    <div id="content"></div>
+                    
+                    
+                     <!--where prompt / messages will appear--> 
                     <div id="response"></div>
 
-                    <!-- where main content will appear -->
-                    <div id="content"></div>
                 </div>
             </div>
 
