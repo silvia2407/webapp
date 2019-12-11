@@ -2,7 +2,9 @@
 
 function callAPI($method, $url, $token, $data)
 {
-    $url="https://hargaeceran.000webhostapp.com/".$url;
+    $base="https://hargaeceran.000webhostapp.com/";
+    
+    $url=$base.$url;
     //$url="localhost:8080/hargaeceran/".$url;
     $curl = curl_init();
     

@@ -1,4 +1,6 @@
 <?php
+$base="https://hargaeceran.000webhostapp.com/";
+
 $data_array =  array(
     "email"=> "chil.diggory@gmail.com",
     "password"=>"12345"
@@ -6,7 +8,7 @@ $data_array =  array(
 
 $data=json_encode($data_array);
 
-$url="https://hargaeceran.000webhostapp.com/login";
+$url=$base."login";
 //$url="localhost:8080/hargaeceran/login";
 $curl = curl_init();
 
