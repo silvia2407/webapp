@@ -38,7 +38,8 @@
 
             <div class="row">
                 <div class="col">
-                     <!--where main content will appear--> 
+                    
+                    <!--where main content will appear--> 
                     <div id="content"></div>
                     
                     

@@ -2,9 +2,17 @@
     include_once 'header.php';
 ?>
 
+<div id="wait" style="display:none;width:69px;height:89px;position:absolute;top:50%;left:50%;padding:2px;"><img src='images/reload.gif' width="64" height="64" /><br>Loading..</div>
 <script>
     $(document).ready(function(){
-        
+        $(document).ajaxStart(function(){
+            $("#wait").css("display", "block");
+            $("#content").css("display", "none");
+          });
+          $(document).ajaxComplete(function(){
+            $("#wait").css("display", "none");
+            $("#content").css("display", "block");
+          });
         
         $.ajax({
             type: "POST",
@@ -102,6 +110,17 @@
         
         $("#proses_mom").on('click', function() {
             clearResponse();
+            
+            $(document).ajaxStart(function(){
+                $("#wait").css("display", "block");
+                $("#response").css("display", "none");
+                $("#content").css("display", "block");
+              });
+              $(document).ajaxComplete(function(){
+                $("#wait").css("display", "none");
+                $("#response").css("display", "block");
+                $("#content").css("display", "block");
+            });
             
             var tahun=$( "#tahun" ).val();
             
