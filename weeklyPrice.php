@@ -74,6 +74,7 @@
                                 <div>
                                     <div>Minggu ke-</div>
                                     <select name="minggu" id="minggu">
+                                        <option value="1,2,3,4,5">Semua</option>
                                         <option value="1">I</option>
                                         <option value="2">II</option>
                                         <option value="3">III</option>
@@ -122,6 +123,7 @@
                             "tahun":tahun
                     },
                     success: function(response){
+                        //console.log(response['info']);
                         if(response['message']==0){
                                 var grafik=`
                                         <br/>
@@ -133,19 +135,29 @@
                                         </div>
 
                                     `;  
+                                $('#response').html(grafik);
                         }else{
+                            var respon=response.info
+                            var a=respon.length;
+                            
+                            var rincian=""
+                            for (i = 0; i < respon.length; i++) {
+                                rincian=rincian+"<table><tr> <td>Minggu</td><td> :</td><td>"+respon[i]['minggu']+"</td></tr><tr> <td>Kualitas/merk</td><td> :</td><td>"+respon[i]['kualitas_merk']+"</td></tr><tr> <td>Weekly Price</td><td> :</td><td>"+respon[i]['hargamingguan']+"</td></tr></table><hr\>";
+                              } 
+                            
                             var grafik=`
                                 <br/>
                                 <div class="card">
                                     <div class="card-header">Hasil</div>
-                                    <div class="card-body">
-                                        `+response+`
+                                    <div class="card-body"><h5>Harga `+ respon[0]['komoditas'] +` di `+respon[0]['kota']+` Tahun `+respon[0]['tahun']+` Bulan `+respon[0]['bulan']+`</h5>
+                                        `+ rincian +`
                                     </div>
                                 </div>
 
                             `;
+                            $('#response').html(grafik);
                         }  
-                        $('#response').html(grafik);
+                        
                     },
                 })
                 

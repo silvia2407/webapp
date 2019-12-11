@@ -56,6 +56,7 @@
                                 <div>
                                     <div>Bulan</div>
                                     <select name="bulan" id="bulan">
+                                        <option value="1,2,3,4,5,6,7,8,9,10,11,12">Semua</option>
                                         <option value="1">Januari</option>
                                         <option value="2">Februari</option>
                                         <option value="3">Maret</option>
@@ -120,19 +121,28 @@
                                         </div>
 
                                     `;  
+                                $('#response').html(grafik);
                         }else{
+                            var respon=response.data
+                            var a=respon.length;
+                            
+                            var rincian=""
+                            for (i = 0; i < respon.length; i++) {
+                                rincian=rincian+"<table><tr> <td>Bulan</td><td> :</td><td>"+respon[i]['bulan']+"</td></tr><tr> <td>Kualitas/merk</td><td> :</td><td>"+respon[i]['kualitas_merk']+"</td></tr><tr> <td>Monthly Price</td><td> :</td><td>"+respon[i]['monthlyPrice']+"</td></tr></table><hr\>";
+                              } 
+                            
                             var grafik=`
                                 <br/>
                                 <div class="card">
                                     <div class="card-header">Hasil</div>
-                                    <div class="card-body">
-                                        `+response+`
+                                    <div class="card-body"><h5>Harga `+ respon[0]['komoditas'] +` di `+respon[0]['kota']+` Tahun `+respon[0]['tahun']+`</h5>
+                                        `+ rincian +`
                                     </div>
                                 </div>
 
                             `;
+                            $('#response').html(grafik);
                         }  
-                        $('#response').html(grafik);
                     },
                 })
                 

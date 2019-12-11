@@ -122,19 +122,31 @@
                                         </div>
 
                                     `;  
+                                $('#response').html(grafik);
                         }else{
+                            var respon=response.data
+                            var a=respon.length;
+                            
+                            var rincian=""
+                            for (i = 0; i < respon.length; i++) {
+                                if(respon[i]['growth_mOm']==null)
+                                    respon[i]['growth_mOm']="<font color='red'><i>data tdk dapat dihitung krn data bulan sebelumnya tdk tersedia</i></font>";
+                                rincian=rincian+"<table><tr> <td>Kualitas/merk</td><td> :</td><td>"+respon[i]['kualitas_merk']+"</td></tr><tr> <td>Growth month on month</td><td> :</td><td>"+respon[i]['growth_mOm']+"</td></tr></table><hr\>";
+                              } 
+                            
                             var grafik=`
                                 <br/>
                                 <div class="card">
                                     <div class="card-header">Hasil</div>
-                                    <div class="card-body">
-                                        `+response+`
+                                    <div class="card-body"><h5>Perkembangan harga month on month `+ respon[0]['komoditas'] +` di `+respon[0]['kota']+`</h5>
+                                        `+ rincian +`
                                     </div>
                                 </div>
 
                             `;
+                            $('#response').html(grafik);
                         }  
-                        $('#response').html(grafik);
+                        
                     },
                 })
                 

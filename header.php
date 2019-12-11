@@ -16,15 +16,7 @@
         <script src="js/jqxlistbox.js"></script>
         <script src="js/jqxbuttons.js"></script>
         <script src="js/jqxcheckbox.js"></script>
-        <script src="js/jqxdata.js"></script>
-        <script src="js/jqxexpander.js"></script>
-        <script src="js/jqxgrid.js"></script>
-        <script src="js/jqxgrid.selection.js"></script>
-        <script src="js/jqxgrid.sort.js"></script>
-        <script src="js/jqxinput.js"></script>
-        <script src="js/jqxpanel.js"></script>
         <script src="js/jqxscrollbar.js"></script>
-        <script src="js/jqxsplitter.js"></script>
         
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="index.php">Informasi Harga Eceran</a>

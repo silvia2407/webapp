@@ -19,7 +19,7 @@
             $return['message']=0;
         }else{
             $return['message']=1;
-            $return['data']=$response['weeklyPrice'];
+            $return['info']=$response['weeklyPrice'];
         }
         echo json_encode($return);
         
