@@ -1,5 +1,5 @@
 <?php
-$base="https://hargaeceran.000webhostapp.com/";
+$base="https://pis.bps.go.id/hargaeceran/";
 
 $data_array =  array(
     "email"=> "chil.diggory@gmail.com",

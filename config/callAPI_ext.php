@@ -1,11 +1,7 @@
 <?php
 
-function callAPI($method, $url, $token, $data)
+function callAPI($method, $url, $data)
 {
-    $base="https://pis.bps.go.id/hargaeceran/";
-    
-    $url=$base.$url;
-    //$url="localhost:8080/hargaeceran/".$url;
     $curl = curl_init();
     
     switch ($method)
@@ -28,10 +24,6 @@ function callAPI($method, $url, $token, $data)
     }
 
     curl_setopt($curl, CURLOPT_URL, $url);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-       'Authorization: Bearer '.$token,
-       'Content-Type: application/json',
-    ));
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
    

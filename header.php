@@ -29,6 +29,7 @@
                     <a class="nav-item nav-link" href="monthlyPrice.php" id='monthlyprice'>Harga Bulanan</a>
                     <a class="nav-item nav-link" href="mom.php" id='mom'>Pertumbuhan Harga Bulanan</a>
                     <a class="nav-item nav-link" href="yoy.php" id='yoy'>Pertumbuhan Harga Tahunan</a>
+                    <a class="nav-item nav-link" href="hotel.php" id='yoy'>Perhotelan</a>
                 </div>
             </div>
         </nav>
